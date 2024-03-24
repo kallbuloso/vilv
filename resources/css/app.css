@@ -1,16 +1,29 @@
-/* Definições de cores para o tema claro */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
+/* Modern Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    background: rgb(var(--v-theme-surface));
+    block-size: 8px;
+    border-end-end-radius: 14px;
+    border-start-end-radius: 14px;
+    inline-size: 4px;
   }
 
-  /* Definições de cores para o tema escuro */
-  .dark-theme {
-    --background-color: #121212;
-    --text-color: #ffffff;
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background: rgb(var(--v-theme-perfect-scrollbar-thumb));
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  ::-webkit-scrollbar-corner {
+    display: none;
   }
