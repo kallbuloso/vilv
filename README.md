@@ -1,66 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# **VILV Laravel 11**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**VILV** Laravel 11 é um kit inicial altamente opnionado para [**Laravel**](https://laravel.com/) e [**Inertia.js**](https://inertiajs.com/) desenvolvido por [**Vite**](https://vitejs.dev/). Ele vem com recursos de importação automática e aproveita os melhores e mais recentes recursos do [**Vue 3**](https://vuejs.org/).
 
-## About Laravel
+Este kit inicial é projetado para ser simples e flexível. Ele é construído com base em práticas recomendadas e é constantemente atualizado com as últimas tecnologias. Ele vem com um sistema de notificação do sistema acionado por servidor, diálogos orientados ao servidor, layouts persistentes de inércia inline e muito mais.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Pré-requisitos
+```bash	
+# PHP ^8.2
+# Composer ^2.7.*
+# Node.js ^20.*
+# NPM ^10.*
+# Laravel 11.*
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   ⏩ [Inertia.js](https://inertiajs.com/)
+-   🔰 [Vue 3](https://github.com/vuejs/core)
+-   📦 [Laravel 11](https://laravel.com/)
+-   ⚡️ [Vite](https://vitejs.dev/)
+-   🔥 Use a [nova sintaxe `<script setup>`](https://github.com/vuejs/rfcs/pull/227) para Vue
+-   📦 [Importação automática de componentes](https://github.com/antfu/unplugin-vue-components)
+-   ⬇️ [Importação automática de APIs Common Vue e Inertia](https://github.com/antfu/unplugin-auto-import)
+-   ✂️ Divisão de código de páginas pronta para uso
+-   🔔 Sistema de notificação do sistema acionado por servidor com fila instalada
+-   💬 Diálogos orientados ao servidor
+-   ⚓ Layouts persistentes de inércia inline
+-   ❄️ [Vuetify Framework](https://vuetify.vom/) configurado imediatamente com mais de 70 componentes do Material Design prontos para usar
+-   😃 [Use ícones de qualquer conjunto de ícones, sem compromisso](https://github.com/antfu/unplugin-icons)
+-   🪲 Depurar com [Ray](https://spatie.be/docs/ray/v1/introduction) na [porta 23517](http://localhost:23517/) por padrão
+-   👮 Aplique a qualidade do código com [ESLint](https://eslint.org/) e [StandardJS](https://standardjs.com/)
+-   🚨 Teste com [PHPUnit](https://phpunit.de/) e [Laravel Dusk](https://laravel.com/docs/11.x/dusk)
 
-## Learning Laravel
+## Início rápido com VSCode
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+# Clonar o repositório
+git clone git@github.com:kallbuloso/vilv.git my-app
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Entre no diretório do projeto
+cd my-app
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Crie o arquivo .env com base no exemplo fornecido
+cp .env.example .env
 
-## Laravel Sponsors
+# Instale as dependências PHP
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Gere uma chave APP para segurança
+php artisan key:generate
 
-### Premium Partners
+# Crie um banco de dados SQLite
+touch database/database.sqlite
+- ou -
+# Crie um banco de dados MySQL e atualize o arquivo .env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=vilv
+DB_USERNAME=root
+DB_PASSWORD=password
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+# Crie as tabelas do banco de dados
+php artisan migrate
 
-## Contributing
+# Instale as dependências de front-end
+npm install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Atualizar configurações do servidor em vite.config.js
+server: {
+    port: 3000
+},
 
-## Code of Conduct
+# Servidor de desenvolvimento do Lift Vite
+npm start
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Iniciar servidor de desenvolvimento Laravel
+php artisan serve
 
-## Security Vulnerabilities
+# Iniciar servidor de desenvolvimento Laravel com Ray
+php artisan serve --port=7000
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Acesse http://localhost
+```
 
-## License
+## Formatando
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+# Formatar PHP
+composer format
+
+# Formatar JavaScript
+npm run format
+```

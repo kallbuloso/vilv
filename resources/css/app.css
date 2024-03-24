@@ -1,3 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Definições de cores para o tema claro */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  /* Definições de cores para o tema escuro */
+  .dark-theme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }

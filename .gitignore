@@ -19,3 +19,6 @@ yarn-error.log
 /.vscode
 /database/database.sqlite
 /stubs
+package-lock.json
+composer.lock
+yarn.lock

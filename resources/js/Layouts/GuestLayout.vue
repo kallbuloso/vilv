@@ -1,20 +1,32 @@
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import { Link } from '@inertiajs/vue3';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue'
+import { Link } from '@inertiajs/vue3'
+
+import { useThemeStore } from '@/Stores/themeStore'
+const themeStore = useThemeStore()
+
+const theme = computed(() => {
+  return themeStore.darkMode ? 'dark' : 'light'
+})
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div>
-            <Link href="/">
-                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
-            </Link>
-        </div>
-
-        <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
-        >
-            <slot />
-        </div>
-    </div>
+  <v-app :theme="theme">
+    <v-main>
+      <v-container fluid>
+        <v-row align="center" justify="center" style="height: 100vh">
+          <v-col cols="12" sm="12" md="10" lg="3">
+            <div class="d-flex justify-center">
+              <Link href="/" as="div">
+                <ApplicationLogo style="height: 75" />
+              </Link>
+            </div>
+            <v-card class="px-6 py-4 mt-3 elevation-2 rounded-lg">
+              <slot />
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>

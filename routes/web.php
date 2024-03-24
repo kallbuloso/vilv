@@ -17,6 +17,46 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/account', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('account');
+Route::get('/editor', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('editor');
+
+Route::group(['prefix' => 'child', 'as' => 'child.'], function () {
+    Route::get('/child1', function () {
+        return Inertia::render('Dashboard');
+    })->name('child1');
+    Route::get('/child2', function () {
+        return Inertia::render('Dashboard');
+    })->name('child2');
+    Route::get('/child3', function () {
+        return Inertia::render('Dashboard');
+    })->name('child3');
+});
+Route::group(['prefix' => 'child2', 'as' => 'child2.'], function () {
+    Route::get('/child1', function () {
+        return Inertia::render('Dashboard');
+    })->name('child1');
+    Route::get('/child2', function () {
+        return Inertia::render('Dashboard');
+    })->name('child2');
+    Route::get('/child3', function () {
+        return Inertia::render('Dashboard');
+    })->name('child3');
+});
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/dashboard', function () {
+//         return Inertia::render('Dashboard');
+//     })->name('dashboard');
+//     Route::get('/account', function () {
+//         return Inertia::render('Dashboard');
+//     })->name('account');
+//     Route::get('/editor', function () {
+//         return Inertia::render('Dashboard');
+//     })->name('editor');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -24,4 +64,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

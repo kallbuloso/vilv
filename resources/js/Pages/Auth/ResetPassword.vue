@@ -1,92 +1,74 @@
 <script setup>
-import GuestLayout from '@/Layouts/GuestLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import GuestLayout from '@/Layouts/GuestLayout.vue'
+import { Head, useForm } from '@inertiajs/vue3'
+import { ref } from 'vue'
 
 const props = defineProps({
-    email: {
-        type: String,
-        required: true,
-    },
-    token: {
-        type: String,
-        required: true,
-    },
-});
+  email: {
+    type: String,
+    required: true
+  },
+  token: {
+    type: String,
+    required: true
+  }
+})
 
 const form = useForm({
-    token: props.token,
-    email: props.email,
-    password: '',
-    password_confirmation: '',
-});
+  token: props.token,
+  email: props.email,
+  password: '',
+  password_confirmation: ''
+})
 
 const submit = () => {
-    form.post(route('password.store'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
-    });
-};
+  form.post('/reset-password', {
+    onFinish: () => form.reset('password', 'password_confirmation')
+  })
+}
+
+const showPassword = ref(false)
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Reset Password" />
-
-        <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="email" value="Email" />
-
-                <TextInput
-                    id="email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    v-model="form.email"
-                    required
-                    autofocus
-                    autocomplete="username"
-                />
-
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
-
-            <div class="mt-4">
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="new-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
-
-            <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
-
-                <TextInput
-                    id="password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password_confirmation"
-                    required
-                    autocomplete="new-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password_confirmation" />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Reset Password
-                </PrimaryButton>
-            </div>
-        </form>
-    </GuestLayout>
+  <GuestLayout>
+    <Head title="Reset Password" />
+    <v-form @submit.prevent="submit">
+      <div class="text-subtitle-1 text-medium-emphasis">Email</div>
+      <v-text-field
+        v-model="form.email"
+        type="email"
+        variant="outlined"
+        density="compact"
+        placeholder="Email address"
+        prepend-inner-icon="mdi-email-outline"
+        :error-messages="form.errors.email"
+      />
+      <div class="text-subtitle-1 text-medium-emphasis">Password</div>
+      <v-text-field
+        v-model="form.password"
+        density="compact"
+        variant="outlined"
+        placeholder="Enter your password"
+        prepend-inner-icon="mdi-lock-outline"
+        :append-inner-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'"
+        :type="showPassword ? 'text' : 'password'"
+        :error-messages="form.errors.password"
+        @click:append-inner="showPassword = !showPassword"
+      />
+      <div class="text-subtitle-1 text-medium-emphasis">Password Confirmation</div>
+      <v-text-field
+        v-model="form.password_confirmation"
+        density="compact"
+        variant="outlined"
+        placeholder="Enter your password"
+        prepend-inner-icon="mdi-lock-outline"
+        :append-inner-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'"
+        :type="showPassword ? 'text' : 'password'"
+        :error-messages="form.errors.password_confirmation"
+        @click:append-inner="showPassword = !showPassword"
+      />
+      <v-btn :loading="form.processing" class="mt-4" type="submit" block color="primary"> Reset Password </v-btn>
+    </v-form>
+  </GuestLayout>
 </template>
