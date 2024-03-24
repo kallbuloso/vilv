@@ -1,11 +1,10 @@
-// export const staticPrimaryColor = '#26A69A'
+export const staticPrimaryColor = '#26A69A' // Teal
 // export const staticPrimaryColor = '#7367F0'
 export const themes = {
   light: {
     dark: false,
     colors: {
-      //   primary: staticPrimaryColor,
-      primary: '#00796B',
+      primary: staticPrimaryColor,
       'on-primary': '#E0F2F1',
       secondary: '#A8AAAE',
       'on-secondary': '#fff',
@@ -61,7 +60,7 @@ export const themes = {
   dark: {
     dark: true,
     colors: {
-      primary: '#26A69A',
+      primary: staticPrimaryColor,
       'on-primary': '#E0F2F1',
       secondary: '#A8AAAE',
       'on-secondary': '#E0F2F1',
