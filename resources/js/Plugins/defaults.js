@@ -134,6 +134,7 @@ export default {
   VTextField: {
     variant: 'outlined',
     density: 'compact',
+    class: 'mb-2',
     color: 'primary',
     hideDetails: 'auto'
   },
