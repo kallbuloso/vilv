@@ -1,8 +1,10 @@
 # **VILV Laravel 11**
 
-**VILV** Laravel 11 é um kit inicial altamente opnionado para [**Laravel**](https://laravel.com/) e [**Inertia.js**](https://inertiajs.com/) desenvolvido por [**Vite**](https://vitejs.dev/). Ele vem com recursos de importação automática e aproveita os melhores e mais recentes recursos do [**Vue 3**](https://vuejs.org/).
+**VILV** Laravel 11 é um kit inicial para [**Laravel**](https://laravel.com/), [**Vuetify 3**](https://vuetify.vom/) e [**Inertia.js**](https://inertiajs.com/). Ele vem com recursos de importação automática e aproveita os melhores e mais recentes recursos do [**Vue 3**](https://vuejs.org/).
 
 Este kit inicial é projetado para ser simples e flexível. Ele é construído com base em práticas recomendadas e é constantemente atualizado com as últimas tecnologias. Ele vem com um sistema de notificação do sistema acionado por servidor, diálogos orientados ao servidor, layouts persistentes de inércia inline e muito mais.
+
+O **VILV** foi inspirado no projeto [**Pronto Fuel**](https://github.com/prontostack/pronto-fuel) de [**Matheus Dal'Pizzol**](https://github.com/MtDalPizzol) e é mantido por [**kallbuloso**](https://github.com/kallbuloso).
 
 ## Pré-requisitos
 ```bash	
