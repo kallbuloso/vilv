@@ -12,10 +12,10 @@ const theme = computed(() => {
     <v-main>
       <v-container fluid>
         <v-row align="center" justify="center" style="height: 100vh">
-          <v-col cols="12" sm="12" md="10" lg="3">
-            <div class="d-flex justify-center text-primary">
-              <Link href="/" as="div">
-                <ApplicationLogo style="height: 85" />
+          <v-col cols="10" sm="8" md="8" lg="4" xl="2">
+            <div class="d-flex justify-center">
+              <Link href="/" as="a">
+                <ApplicationLogo style="height: 75" />
               </Link>
             </div>
             <v-card class="px-6 py-4 mt-3 elevation-2 rounded-lg">

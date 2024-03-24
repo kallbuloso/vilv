@@ -1,8 +1,4 @@
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue'
-import VuetifyLogo from '@/Components/VuetifyLogo.vue'
-import { Head, Link } from '@inertiajs/vue3'
-
 const props = defineProps({
   canLogin: Boolean,
   canRegister: Boolean,
@@ -20,15 +16,17 @@ const props = defineProps({
             <v-card class="pa-3 rounded-lg elevation-8">
               <v-card-title>
                 <div class="d-flex justify-center mb-4">
-                  <ApplicationLogo class="mr-1" style="height: 75" />
                   <VuetifyLogo class="ml-1" style="height: 75" />
                 </div>
-                <span class="text-h5">Welcome to Laravel + Vuetify</span>
+                <div class="d-flex justify-center mb-4">
+                  <span class="text-h5">Bem vindo ao V.I.L.V.</span>
+                </div>
               </v-card-title>
               <v-card-text>
                 <p class="text-body-2">
-                  Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading
-                  our documentation from beginning to end.
+                  O V.I.L.V. é um Starter Kit de desenvolvimento para a construção de aplicatições. <br />
+                  Contruído com Laravel 11, Vue 3, Inertia e Vuetify.<br />
+                  Pronto para construir sua próxima grande ideia?
                 </p>
               </v-card-text>
               <v-card-actions>
@@ -40,10 +38,10 @@ const props = defineProps({
                 <div v-else>
                   <div class="d-flex">
                     <Link v-if="props.canLogin" href="/login" class="mr-2" as="div">
-                      <v-btn color="primary">Login</v-btn>
+                      <v-btn color="primary">Entrar</v-btn>
                     </Link>
                     <Link v-if="props.canRegister" href="/register" as="div">
-                      <v-btn color="secondary">Sign Up</v-btn>
+                      <v-btn color="secondary">Inscrever-me</v-btn>
                     </Link>
                   </div>
                 </div>

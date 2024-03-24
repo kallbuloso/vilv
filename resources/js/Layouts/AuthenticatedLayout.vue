@@ -44,7 +44,7 @@ onMounted(() => {
     </v-navigation-drawer>
     <v-app-bar :elevation="0">
       <v-app-bar-nav-icon @click="toggleDrawer" />
-      <v-toolbar-title text="Laravel" />
+      <v-toolbar-title text="VILV" />
       <v-spacer />
       <v-btn icon @click="toggleTheme">
         <v-icon>
@@ -60,34 +60,3 @@ onMounted(() => {
     </v-main>
   </v-app>
 </template>
-
-<style lang="scss">
-/* width */
-::-webkit-scrollbar {
-  background: rgb(var(--v-theme-surface));
-  block-size: 8px;
-  border-end-end-radius: 14px;
-  border-start-end-radius: 14px;
-  inline-size: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 0.5rem;
-  background: rgb(var(--v-theme-perfect-scrollbar-thumb));
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-::-webkit-scrollbar-corner {
-  display: none;
-}
-</style>
