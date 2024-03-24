@@ -1,7 +1,7 @@
 <script setup>
 import { useDrawerStore } from '@/Stores/drawerStore'
 import { useThemeStore } from '@/Stores/themeStore'
-// import { swToastSuccess } from '@/utils/sweetAlert2'
+import { swToastSuccess } from '@/utils/sweetAlert2'
 const themeStore = useThemeStore()
 const drawerStore = useDrawerStore()
 
@@ -22,7 +22,7 @@ const theme = computed(() => {
 })
 
 onMounted(() => {
-  //   swToastSuccess('Welcome back, Meria!')
+  swToastSuccess('Welcome back, Meria!')
 })
 </script>
 
@@ -36,7 +36,7 @@ onMounted(() => {
       <NavigationMenu />
       <template v-slot:append>
         <div class="pa-2">
-          <Link href="/logout" method="post" as="div">
+          <Link :href="route('logout')" method="post" as="div">
             <v-list-item prepend-icon="mdi-exit-to-app" title="Log Out" link />
           </Link>
         </div>
