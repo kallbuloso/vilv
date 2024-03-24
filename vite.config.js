@@ -38,6 +38,9 @@ export default defineConfig({
         }
       ]
     }),
+    Icons({
+      autoInstall: true
+    }),
     Components({
       dirs: [
         './resources/js/Components', // components
@@ -67,10 +70,6 @@ export default defineConfig({
         }
       ]
     }),
-    Icons({
-      autoInstall: true
-    }),
-
     {
       name: 'vite:inertia:layout',
       enforce: 'pre',

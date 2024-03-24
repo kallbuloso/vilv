@@ -21,14 +21,15 @@ O **VILV** foi inspirado no projeto [**Pronto Fuel**](https://github.com/prontos
 -   🔰 [Vue 3](https://github.com/vuejs/core)
 -   📦 [Laravel 11](https://laravel.com/)
 -   ⚡️ [Vite](https://vitejs.dev/)
--   🔥 Use a [nova sintaxe `<script setup>`](https://github.com/vuejs/rfcs/pull/227) para Vue
--   📦 [Importação automática de componentes](https://github.com/antfu/unplugin-vue-components)
+-   🔥 Use a nova sintaxe [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) para Vue
+-   📦 Importação automática de [componentes](https://github.com/antfu/unplugin-vue-components)
 -   ⬇️ [Importação automática de APIs Common Vue e Inertia](https://github.com/antfu/unplugin-auto-import)
 -   ✂️ Divisão de código de páginas pronta para uso
 -   🔔 Sistema de notificação do sistema acionado por servidor com fila instalada
 -   💬 Diálogos orientados ao servidor
 -   ⚓ Layouts persistentes de inércia inline
--   ❄️ [Vuetify Framework](https://vuetify.vom/) configurado imediatamente com mais de 70 componentes do Material Design prontos para usar
+-   ❄️ [Vuetify Framework](https://vuetify.vom/) configurado imediatamente com os melhores componentes do Material Design prontos para usar
+-   📦 Gerenciamento de estado com [Pinia](https://github.com/vuejs/pinia)
 -   😃 [Use ícones de qualquer conjunto de ícones, sem compromisso](https://github.com/antfu/unplugin-icons)
 -   🪲 Depurar com [Ray](https://spatie.be/docs/ray/v1/introduction) na [porta 23517](http://localhost:23517/) por padrão
 -   👮 Aplique a qualidade do código com [ESLint](https://eslint.org/) e [StandardJS](https://standardjs.com/)
