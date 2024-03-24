@@ -1,20 +1,43 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "@inertiajs/vue3": "^1.0.0",
-        "@tailwindcss/forms": "^0.5.3",
-        "@vitejs/plugin-vue": "^5.0.0",
-        "autoprefixer": "^10.4.12",
-        "axios": "^1.6.4",
-        "laravel-vite-plugin": "^1.0",
-        "postcss": "^8.4.31",
-        "tailwindcss": "^3.2.1",
-        "vite": "^5.0",
-        "vue": "^3.4.0"
-    }
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore",
+    "format": "prettier .  --write"
+  },
+  "devDependencies": {
+    "@inertiajs/vue3": "^1.0.0",
+    "@mdi/font": "^7.4.47",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vueuse/components": "^10.9.0",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.4",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.23.0",
+    "laravel-vite-plugin": "^1.0",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persist": "^1.0.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.72.0",
+    "sweetalert2": "^11.10.6",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-icons": "^0.18.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue": "^3.4.0",
+    "vue3-perfect-scrollbar": "^1.6.1",
+    "vuetify": "^3.5.9"
+  }
 }
