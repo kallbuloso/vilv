@@ -8,6 +8,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
 import { ZiggyVue } from '../../vendor/tightenco/ziggy'
 import piniaPluginPersist from 'pinia-plugin-persist'
 import vuetify from './Plugins/vuetify'
+import { staticPrimaryColor } from '@/Plugins/theme'
 // import * from './utils/sweetAlert2'
 // import Swal from 'sweetalert2'
 
@@ -25,6 +26,6 @@ createInertiaApp({
       .mount(el)
   },
   progress: {
-    color: '#4B5563'
+    color: staticPrimaryColor
   }
 })
