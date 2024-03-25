@@ -16,7 +16,7 @@ const renderToasts = (toastsSource) => {
   if (Array.isArray(toasts)) {
     toasts.forEach((toas) => {
       swToast(toas.text, toas.type, toas.duration)
-      console.log('Toasts Source: ', toas)
+      //   console.log('Toasts Source: ', toas)
     })
   }
 }
