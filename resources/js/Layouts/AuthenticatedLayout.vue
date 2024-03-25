@@ -51,7 +51,7 @@ onMounted(() => {
         </v-icon>
       </v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main class="d-flex align-center justify-center">
       <v-container>
         <slot />
         <scroll-to-top />
