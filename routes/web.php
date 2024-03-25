@@ -14,54 +14,33 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-Route::get('/account', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('account');
-Route::get('/editor', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('editor');
 
-Route::group(['prefix' => 'child', 'as' => 'child.'], function () {
-    Route::get('/child1', function () {
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
-    })->name('child1');
-    Route::get('/child2', function () {
-        return Inertia::render('Dashboard');
-    })->name('child2');
-    Route::get('/child3', function () {
-        return Inertia::render('Dashboard');
-    })->name('child3');
-});
-Route::group(['prefix' => 'child2', 'as' => 'child2.'], function () {
-    Route::get('/child1', function () {
-        return Inertia::render('Dashboard');
-    })->name('child1');
-    Route::get('/child2', function () {
-        return Inertia::render('Dashboard');
-    })->name('child2');
-    Route::get('/child3', function () {
-        return Inertia::render('Dashboard');
-    })->name('child3');
-});
-// Route::group(['middleware' => 'auth'], function () {
-//     Route::get('/dashboard', function () {
-//         return Inertia::render('Dashboard');
-//     })->name('dashboard');
-//     Route::get('/account', function () {
-//         return Inertia::render('Dashboard');
-//     })->name('account');
-//     Route::get('/editor', function () {
-//         return Inertia::render('Dashboard');
-//     })->name('editor');
-// });
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::controller(ProfileController::class)->prefix('profile')->as('profile.')->group(function () {
+        Route::get('/{id}/edit', 'edit')->name('edit');
+        Route::put('{request}/{id}', 'update')->name('update');
+        Route::delete('/{id}', 'destroy')->name('destroy');
+    });
+
+    // Exemplo de rota com prefixo e nome
+    /*
+    Route::group(['middleware' => 'auth', 'prefix' => 'child', 'as' => 'child.'], function () {
+        Route::get('/child1', function () {
+            return Inertia::render('Dashboard');
+        })->name('child1');
+    // na rota: route('child.child1')
+    // no navegador: http://localhost:8000/child/child1
+    });
+    */
+});
+
+// exemplo de rota para notificação
+Route::post('/notify/{type}', function ($type) {
+    return back()->toast('Notificação do servidor =)', $type);
 });
 
 require __DIR__ . '/auth.php';
