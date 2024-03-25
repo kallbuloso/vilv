@@ -22,7 +22,9 @@ const renderToasts = (toastsSource) => {
 }
 
 onMounted(() => {
-  renderToasts(toast)
+  setTimeout(() => {
+    renderToasts(toast)
+  }, 200)
 })
 
 watch(toast, (newToasts) => {
