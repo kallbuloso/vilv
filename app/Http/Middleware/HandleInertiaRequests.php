@@ -2,8 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
+use App\Facades\Toast;
 use Inertia\Middleware;
+use Illuminate\Http\Request;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -31,15 +32,17 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
+            'csrf' => csrf_token(),
             'auth' => [
                 'user' => $request->user(),
             ],
-            'flash' => [
-                'success' => fn () => $request->session()->get('success'),
-                'error' => fn () => $request->session()->get('error'),
-                'warning' => fn () => $request->session()->get('warning'),
-                'info' => fn () => $request->session()->get('info'),
-            ],
+            'toasts' => Toast::all(),
+            // 'flash' => [
+            //     'success' => fn () => $request->session()->get('success'),
+            //     'error' => fn () => $request->session()->get('error'),
+            //     'warning' => fn () => $request->session()->get('warning'),
+            //     'info' => fn () => $request->session()->get('info'),
+            // ],
         ];
     }
 }

@@ -32,6 +32,7 @@
 
 <script setup>
 import navigation from '@/Configs/navigation'
+
 const activeRoute = ref('')
 const openedGroup = ref([''])
 const items = computed(() => {
@@ -41,11 +42,9 @@ const getString = (str) => {
   return str.split('.')[0]
 }
 
-onMounted(() => {
-  router.on('navigate', (event) => {
-    activeRoute.value = route().current()
-    openedGroup.value = [getString(activeRoute.value)]
-    // console.log(openedGroup.value[0])
-  })
+router.on('navigate', (event) => {
+  activeRoute.value = route().current()
+  openedGroup.value = [getString(activeRoute.value)]
+  // console.log(openedGroup.value[0])
 })
 </script>

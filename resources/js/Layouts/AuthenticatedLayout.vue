@@ -1,7 +1,7 @@
 <script setup>
 import { useDrawerStore } from '@/Stores/drawerStore'
 import { useThemeStore } from '@/Stores/themeStore'
-import { swToastSuccess } from '@/utils/sweetAlert2'
+// import { swToastSuccess } from '@/utils/sweetAlert2'
 const themeStore = useThemeStore()
 const drawerStore = useDrawerStore()
 
@@ -22,7 +22,7 @@ const theme = computed(() => {
 })
 
 onMounted(() => {
-  swToastSuccess('Welcome back, Meria!')
+  //   swToastSuccess('Welcome back, Meria!')
 })
 </script>
 

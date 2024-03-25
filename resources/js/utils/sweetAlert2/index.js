@@ -1,5 +1,16 @@
 import Swal from 'sweetalert2'
 
+const swToast = (title = 'Salvo com sucesso!', icon = 'success', timer = 1500) => {
+  Swal.fire({
+    icon: icon, // success, error, warning, info, question
+    title: title,
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: timer
+  })
+}
+
 const swBase = (text = 'Olá mundo') => {
   Swal.fire(text)
 }
@@ -31,18 +42,6 @@ const swConfirm = (title, text, confirmButtonText = 'Tranquilo', cancelButtonTex
     showCancelButton: true,
     confirmButtonText: confirmButtonText,
     cancelButtonText: cancelButtonText
-  })
-}
-
-const swToast = (title = 'Salvo com sucesso!', icon = 'success', text = '') => {
-  Swal.fire({
-    icon: icon, // success, error, warning, info, question
-    title: title,
-    text: text,
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 1500
   })
 }
 
