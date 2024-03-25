@@ -32,14 +32,13 @@ onMounted(() => {
       <v-list>
         <v-list-item :prepend-avatar="avatar" :title="$page.props.auth.user.name" :subtitle="$page.props.auth.user.email" />
       </v-list>
-      <v-divider />
       <NavigationMenu />
       <template v-slot:append>
-        <div class="pa-2">
+        <v-list v-show="!drawerStore.isOpen" density="compact" :lines="false" nav>
           <Link :href="route('logout')" method="post" as="div">
-            <v-list-item prepend-icon="mdi-exit-to-app" title="Log Out" link />
+            <v-list-item prepend-icon="mdi-exit-to-app" title="Sair" link />
           </Link>
-        </div>
+        </v-list>
       </template>
     </v-navigation-drawer>
     <v-app-bar :elevation="0">
