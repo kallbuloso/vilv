@@ -9,7 +9,7 @@ const props = defineProps({
 <template layout="GuestLayout">
   <Head title="Welcome" />
   <v-row align="center" justify="center" style="height: 100vh">
-    <v-col cols="12" sm="12" md="10" lg="4">
+    <v-col cols="12" sm="7" md="5" lg="4" xl="3" xxl="2">
       <v-card class="pa-3 rounded-lg elevation-8">
         <v-card-title>
           <div class="d-flex justify-center mb-4">

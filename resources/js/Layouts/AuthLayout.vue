@@ -12,7 +12,7 @@ const theme = computed(() => {
     <v-main>
       <v-container fluid>
         <v-row align="center" justify="center" style="height: 100vh">
-          <v-col cols="10" sm="8" md="8" lg="4" xl="2">
+          <v-col cols="10" sm="7" md="5" lg="4" xl="3" xxl="2">
             <div class="d-flex justify-center">
               <Link href="/" as="a">
                 <ApplicationLogo style="height: 75" />
