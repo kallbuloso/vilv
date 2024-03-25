@@ -1,8 +1,5 @@
 <template>
-  <Transition
-    name="fade"
-    mode="out-in"
-  >
+  <Transition name="fade" mode="out-in">
     <slot />
   </Transition>
 </template>
@@ -16,7 +13,7 @@ defineProps({
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .fade-enter-from,
