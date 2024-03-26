@@ -2,9 +2,16 @@
 
 **VILV** Laravel 11 é um kit inicial para [**Laravel**](https://laravel.com/), [**Vuetify 3**](https://vuetify.vom/) e [**Inertia.js**](https://inertiajs.com/). Ele vem com recursos de importação automática e aproveita os melhores e mais recentes recursos do [**Vue 3**](https://vuejs.org/).
 
-Este kit inicial é projetado para ser simples e flexível. Ele é construído com base em práticas recomendadas e é constantemente atualizado com as últimas tecnologias. Ele vem com um sistema de notificação do sistema acionado por servidor, diálogos orientados ao servidor, layouts persistentes de inércia inline e muito mais.
+Este kit inicial é projetado para ser simples e flexível. Ele é construído com base em práticas recomendadas e será, `dentro das minhas possibilidades e/ou ajuda da comunidade,` constantemente atualizado com as últimas tecnologias. Ele vem com um sistema de notificação do sistema acionado por servidor, diálogos orientados ao servidor, layouts persistentes de inércia inline e muito mais.
 
-O **VILV** foi inspirado no projeto [**Pronto Fuel**](https://github.com/prontostack/pronto-fuel) de [**Matheus Dal'Pizzol**](https://github.com/MtDalPizzol) e é mantido por [**kallbuloso**](https://github.com/kallbuloso).
+O **VILV** foi inspirado nos projetos [**Pronto Fuel**](https://github.com/prontostack/pronto-fuel), de [**Matheus Dal'Pizzol**](https://github.com/MtDalPizzol) e [**laravel-inertiajs-vuetify-starterkit**](https://github.com/ahmadfaizk/laravel-inertiajs-vuetify-starterkit) e é mantido por [**kallbuloso**](https://github.com/kallbuloso).
+
+# Importante
+Em breve, o **VILV** terá uma documentação completa e um guia de uso mais detalhado.
+
+Para um futuro próximo, o **VILV** terá um gerador de CRUD para facilitar a criação de novos recursos.
+
+Mais futuramente o **VILV** terá um sistema de autenticação completo com permissões e papéis.
 
 ## Pré-requisitos
 
@@ -13,7 +20,6 @@ O **VILV** foi inspirado no projeto [**Pronto Fuel**](https://github.com/prontos
 # Composer ^2.7.*
 # Node.js ^20.*
 # NPM ^10.*
-# Laravel 11.*
 ```
 
 ## Features
@@ -32,18 +38,17 @@ O **VILV** foi inspirado no projeto [**Pronto Fuel**](https://github.com/prontos
 - ❄️ [Vuetify Framework](https://vuetify.vom/) configurado imediatamente com os melhores componentes do Material Design prontos para usar
 - 📦 Gerenciamento de estado com [Pinia](https://github.com/vuejs/pinia)
 - 😃 [Use ícones de qualquer conjunto de ícones, sem compromisso](https://github.com/antfu/unplugin-icons)
-- 🪲 Depurar com [Ray](https://spatie.be/docs/ray/v1/introduction) na [porta 23517](http://localhost:23517/) por padrão
-- 👮 Aplique a qualidade do código com [ESLint](https://eslint.org/) e [StandardJS](https://standardjs.com/)
-- 🚨 Teste com [PHPUnit](https://phpunit.de/) e [Laravel Dusk](https://laravel.com/docs/11.x/dusk)
+- 👮 Aplique a qualidade do código com [ESLint](https://eslint.org/) e [Prettier](https://prettier.io)
+- 🚨 Teste com [PHPUnit](https://phpunit.de/)
 
 ## Início rápido com VSCode
 
 ```bash
 # Clonar o repositório
-git clone git@github.com:kallbuloso/vilv.git my-app
+git clone git@github.com:kallbuloso/vilv.git neu-vilv
 
 # Entre no diretório do projeto
-cd my-app
+cd neu-vilv
 
 # Crie o arquivo .env com base no exemplo fornecido
 cp .env.example .env
@@ -66,7 +71,7 @@ DB_USERNAME=root
 DB_PASSWORD=password
 
 # Crie as tabelas do banco de dados
-php artisan migrate
+php artisan migrate --seed
 
 # Instale as dependências de front-end
 npm install
@@ -79,13 +84,14 @@ server: {
 # Servidor de desenvolvimento do Lift Vite
 npm start
 
-# Iniciar servidor de desenvolvimento Laravel
+# Ou iniciar servidor de desenvolvimento Laravel
 php artisan serve
 
-# Iniciar servidor de desenvolvimento Laravel com Ray
+# Iniciar servidor de desenvolvimento Laravel com outra porta
 php artisan serve --port=7000
 
-# Acesse http://localhost
+# Acesse 
+http://localhost
 ```
 
 ## Formatando
@@ -97,3 +103,55 @@ composer format
 # Formatar JavaScript
 npm run format
 ```
+# Todos
+### Feitos
+```bash
+✔  Instalar laravel/breeze -vue
+✔  Remover TailwindCSS
+✔  Adicionar Vuetify 3
+✔  Melhorar CSS do Vuetify
+✔  Adicionar e configurar Eslint
+✔  Adicionar e configurar Prettier
+✔  Configurar Vite
+✔  Adicionar layouts persistentes inline
+✔  Adicionar Pinia
+    ✔  toggle de tema (claro/escuro)
+    ✔  toggle de v-navigation-drawer
+✔  Adicionar importação automática de componentes, Layouts e Transições
+✔  Adicionar sistema de notificação toast do lado servidor com Sweetalert2
+✔  Adicionar importação automática de recursos utils
+    ✔  helpers
+    ✔  formatters
+    ✔  validators
+    ✔  headers
+    ✔  metadata
+    ✔  pagedArray (Paginação)
+    ✔  sweetalert2
+✔  Tornar o projeto público
+```
+### Em andamento
+```bash
+🚧 CRUD de exemplo com paginação
+```
+### A fazer
+```bash
+✘ Adicionar sistema de autenticação com controle de permissões e papéis
+✘ Adicionar importação automática de `APIs`
+✘ Adicionar diálogos orientados ao servidor
+✘ Adicionar modals
+✘ Adicionar documentação
+✘ Criar site para demonstração
+```
+### Futuro
+```bash
+✘ Adicionar gerador de CRUD
+```
+
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um problema ou enviar uma solicitação de pull.
+
+## Licença
+MIT - Esta é uma licença de software livre muito permissiva que permite que você faça o que quiser com o código, desde que forneça atribuição e não responsabilize os autores. Leia o arquivo [LICENSE](License) para obter mais informações.
+
+## Disclaimer
+Este projeto é um trabalho em andamento e está em constante evolução. Ele é fornecido "como está" e sem garantias de qualquer tipo. Use por sua conta e risco.
