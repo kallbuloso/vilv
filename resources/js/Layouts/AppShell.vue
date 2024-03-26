@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import { swToast } from '@/utils/sweetAlert2'
-
 const toast = computed(() => {
   return usePage().props.toasts
 })

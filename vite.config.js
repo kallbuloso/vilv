@@ -36,7 +36,8 @@ export default defineConfig({
         {
           '@inertiajs/vue3': ['router', 'usePage', 'useForm']
         }
-      ]
+      ],
+      dirs: ['resources/js/utils']
     }),
     Icons({
       autoInstall: true

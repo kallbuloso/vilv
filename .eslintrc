@@ -15,6 +15,42 @@
         "vue/multi-word-component-names": "off"
     },
     "globals": {
+        // sweetalert2
+        "swToast": true,
+        // metadata
+        "setMetadata": true,
+        // Formaters
+        "formatDate": true,
+        "avatarText": true,
+        "kFormatter": true,
+        "formatDateToMonthShort": true,
+        "prefixWithPlus": true,
+        // Helpers
+        "isEmpty": true,
+        "isNotEmpty": true,
+        "isNullOrUndefined": true,
+        "isEmptyArray": true,
+        "isObject": true,
+        "isArrayOfObjects": true,
+        "isToday": true,
+        "sleep": true,
+        // Validators
+        "requiredValidator": true,
+        "emailValidator": true,
+        "passwordValidator": true,
+        "confirmedValidator": true,
+        "betweenValidator": true,
+        "integerValidator": true,
+        "regexValidator": true,
+        "alphaValidator": true,
+        "urlValidator": true,
+        "lengthValidator": true,
+        "alphaDashValidator": true,
+        "isValidLength": true,
+        // Headers
+        "apiHeaders": true,
+        // Pagination
+        "pagedArray": true,
         // General
         "nextTick": true,
         "defineComponent": true,

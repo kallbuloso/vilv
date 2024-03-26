@@ -28,7 +28,7 @@ const theme = computed(() => {
         <v-list-item :prepend-avatar="avatar" :title="$page.props.auth.user.name" :subtitle="$page.props.auth.user.email" />
       </v-list>
       <NavigationMenu />
-      <template v-slot:append>
+      <template #append>
         <v-list v-show="!drawerStore.isOpen" density="compact" :lines="false" nav>
           <Link :href="route('logout')" method="post" as="div">
             <v-list-item prepend-icon="mdi-exit-to-app" title="Sair" link />

@@ -14,7 +14,7 @@ const onScroll = (e) => {
 
 <template>
   <VScaleTransition style="transform-origin: center" class="scroll-to-top d-print-none">
-    <VBtn v-scroll="onScroll" v-show="fab" icon density="comfortable" @click="goTo(0)">
+    <VBtn v-show="fab" v-scroll="onScroll" icon density="comfortable" @click="goTo(0)">
       <VIcon size="22" icon="$collapse" />
     </VBtn>
   </VScaleTransition>
