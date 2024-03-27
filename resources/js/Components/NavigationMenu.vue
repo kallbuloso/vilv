@@ -35,8 +35,8 @@ import navigation from '@/Configs/navigation'
 
 const activeRoute = ref('')
 const openedGroup = ref([''])
-const items = computed(() => {
-  return [...navigation.items]
+const items = reactive({
+  ...navigation.items
 })
 const getString = (str) => {
   return str.split('.')[0]
