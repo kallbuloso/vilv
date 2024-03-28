@@ -38,13 +38,11 @@ const openedGroup = ref([''])
 const items = reactive({
   ...navigation.items
 })
-const getString = (str) => {
-  return str.split('.')[0]
-}
 
-router.on('navigate', (event) => {
-  activeRoute.value = route().current()
-  openedGroup.value = [getString(activeRoute.value)]
-  // console.log(openedGroup.value[0])
+router.on('navigate', () => {
+  if (isNotEmpty(route().current())) {
+    activeRoute.value = route().current()
+    openedGroup.value = [activeRoute.value.split('.')[0]]
+  }
 })
 </script>

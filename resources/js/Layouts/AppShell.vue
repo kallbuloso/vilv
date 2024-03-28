@@ -20,9 +20,9 @@ const renderToasts = (toastsSource) => {
 }
 
 onMounted(() => {
-  setTimeout(() => {
+  nextTick(() => {
     renderToasts(toast)
-  }, 200)
+  })
 })
 
 watch(toast, (newToasts) => {
