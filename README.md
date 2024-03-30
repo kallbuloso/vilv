@@ -6,6 +6,8 @@ Este kit inicial é projetado para ser simples e flexível. Ele é construído c
 
 O **VILV** foi inspirado nos projetos [**Pronto Fuel**](https://github.com/prontostack/pronto-fuel), de [**Matheus Dal'Pizzol**](https://github.com/MtDalPizzol) e [**laravel-inertiajs-vuetify-starterkit**](https://github.com/ahmadfaizk/laravel-inertiajs-vuetify-starterkit) e é mantido por [**kallbuloso**](https://github.com/kallbuloso).
 
+![image](./resources/Docs/Last_VILV.gif)
+
 # Importante
 Em breve, o **VILV** terá uma documentação completa e um guia de uso mais detalhado.
 
