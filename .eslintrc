@@ -47,6 +47,11 @@
         "lengthValidator": true,
         "alphaDashValidator": true,
         "isValidLength": true,
+        "cnpjValidator": true,
+        "cpfValidator": true,
+        "phoneValidator": true,
+        "dateValidator": true,
+        "cepValidator": true,
         // Headers
         "apiHeaders": true,
         // Pagination

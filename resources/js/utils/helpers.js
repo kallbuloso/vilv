@@ -34,6 +34,13 @@ export const isToday = (date) => {
 }
 
 // 👉 Sleep
-export const sleep = (seconds) => {
-  return new Promise((res) => setTimeout(res, seconds * 1000))
+// export const sleep = (seconds) => {
+//   return new Promise((res) => setTimeout(res, seconds * 1000))
+// }
+
+export const onLoading = () => {
+  const state = ref(false)
+  router.on('start', () => (state.value = true))
+  router.on('finish', () => (state.value = false))
+  return state.value
 }
