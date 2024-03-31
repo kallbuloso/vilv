@@ -4,14 +4,14 @@
     <template v-for="(item, index) in items">
       <!-- If header -->
       <template v-if="item.header">
-        <v-list-subheader :key="index" inset>
+        <v-list-subheader :key="index">
           {{ item.header }}
         </v-list-subheader>
-        <v-divider v-if="item.divider" :key="index" inset />
+        <v-divider v-if="item.divider" :key="index" />
       </template>
       <!-- If children -->
       <template v-else-if="item.children">
-        <v-list-group :key="index" :value="item.group" :prepend-icon="item.icon" active-class="primary--text" link>
+        <v-list-group :key="index" :value="item.group" :prepend-icon="item.icon" link>
           <template #activator="{ props }">
             <v-list-item v-bind="props" :title="item.title" :class="{ 'v-list-group--active text-primary': route().current(`${item.group}.*`) }" />
           </template>
@@ -33,10 +33,10 @@
 <script setup>
 import navigation from '@/Configs/navigation'
 
-const activeRoute = ref('')
+const activeRoute = ref(null)
 const openedGroup = ref([''])
 const items = reactive({
-  ...navigation.items
+  ...navigation
 })
 
 router.on('navigate', () => {
