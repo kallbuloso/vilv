@@ -32,10 +32,10 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            'csrf' => csrf_token(),
             'auth' => [
                 'user' => $request->user(),
             ],
+            'appName' => config('app.name'),
             'toasts' => Toast::all(),
             // 'flash' => [
             //     'success' => fn () => $request->session()->get('success'),
