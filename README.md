@@ -1,4 +1,12 @@
 # **VILV Laravel 11**
+# Laravel + Vue + Vuetify + Inertia Boilerplate
+
+![PHP](https://img.shields.io/badge/php-^8.2-%23777BB4.svg?style=for-the-badge&logo=php&logoColor==%234FC08D)
+![Vue.js](https://img.shields.io/badge/vuejs-^3.4.x-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![Laravel](https://img.shields.io/badge/laravel-^11.x-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor==%234FC08D)
+![Vite](https://img.shields.io/badge/vite-^5.0.x-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor==%234FC08D)
+![Vuetify](https://img.shields.io/badge/Vuetify-^3.5.x-16B7FB.svg?style=for-the-badge&logo=vuetify&logoColor==%234FC08D)
+![Inertia](https://img.shields.io/badge/Inertia-^1.0.x-8569ec?style=for-the-badge&logo=Inertia&logoColor==%234FC08D)
 
 **VILV** Laravel 11 é um kit inicial para [**Laravel**](https://laravel.com/), [**Vuetify 3**](https://vuetify.vom/) e [**Inertia.js**](https://inertiajs.com/). Ele vem com recursos de importação automática e aproveita os melhores e mais recentes recursos do [**Vue 3**](https://vuejs.org/).
 
