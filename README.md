@@ -1,5 +1,5 @@
 # **VILV Laravel 11**
-# Laravel + Vue + Vuetify + Inertia Boilerplate
+## Laravel + Vue + Vuetify + Inertia Boilerplate
 
 ![PHP](https://img.shields.io/badge/php-^8.2-%23777BB4.svg?style=for-the-badge&logo=php&logoColor==%234FC08D)
 ![Vue.js](https://img.shields.io/badge/vuejs-^3.4.x-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
