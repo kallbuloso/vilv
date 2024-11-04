@@ -70,6 +70,7 @@ onMounted(() => {
         </div>
         <slot />
         <scroll-to-top />
+        <app-footer></app-footer>
       </v-container>
     </v-main>
   </v-app>
