@@ -40,6 +40,7 @@ onMounted(() => {
             </v-icon>
           </template>
           <v-list-item-title>{{ $page.props.appName }}</v-list-item-title>
+          <v-list-item-subtitle>{{ $page.props.auth.user.name }}</v-list-item-subtitle>
         </v-list-item>
       </v-list>
       <NavigationMenu />
