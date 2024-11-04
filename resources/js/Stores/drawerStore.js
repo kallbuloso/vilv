@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useDrawerStore = defineStore('drawerStore', {
   state: () => ({
-    _isOpen: false // default value
+    _isOpen: true // default value
   }),
   getters: {
     isOpen: (state) => state._isOpen
